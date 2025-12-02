@@ -1,0 +1,3 @@
+{
+  "extends": "@graphprotocol/graph-ts/tsconfig.json"
+}

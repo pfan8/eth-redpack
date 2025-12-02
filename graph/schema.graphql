@@ -1,0 +1,28 @@
+type RedPacket @entity(immutable: false) {
+  id: ID!
+  creator: Bytes!
+  totalAmount: BigInt!
+  remainingAmount: BigInt!
+  packetCount: Int!
+  claimedCount: Int!
+  createdAt: BigInt!
+  isEmpty: Boolean!
+  claims: [Claim!]! @derivedFrom(field: "redPacket")
+}
+
+type Claim @entity(immutable: true) {
+  id: ID!
+  redPacket: RedPacket!
+  claimer: Bytes!
+  claimerUser: User!
+  amount: BigInt!
+  timestamp: BigInt!
+  txHash: Bytes!
+}
+
+type User @entity(immutable: false) {
+  id: ID!
+  totalClaimed: BigInt!
+  claimCount: Int!
+  claims: [Claim!]! @derivedFrom(field: "claimerUser")
+}
