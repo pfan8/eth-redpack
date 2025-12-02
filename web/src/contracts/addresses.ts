@@ -1,0 +1,3 @@
+// 合约地址配置
+// 部署后更新此地址
+export const RED_PACKET_CONTRACT_ADDRESS = import.meta.env.VITE_CONTRACT_ADDRESS || '0x0000000000000000000000000000000000000000' as `0x${string}`

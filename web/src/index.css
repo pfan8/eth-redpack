@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --color-redpack-50: #fff5f5;
+  --color-redpack-100: #ffe0e0;
+  --color-redpack-200: #ffcccc;
+  --color-redpack-300: #ff9999;
+  --color-redpack-400: #ff6666;
+  --color-redpack-500: #ff3333;
+  --color-redpack-600: #e60000;
+  --color-redpack-700: #cc0000;
+  --color-redpack-800: #b30000;
+  --color-redpack-900: #990000;
+  
+  --color-gold-50: #fffef0;
+  --color-gold-100: #fffce0;
+  --color-gold-200: #fff9c0;
+  --color-gold-300: #fff6a0;
+  --color-gold-400: #fff380;
+  --color-gold-500: #fff060;
+  --color-gold-600: #e6d956;
+  --color-gold-700: #ccc24c;
+  --color-gold-800: #b3ab42;
+  --color-gold-900: #999438;
+  
+  --shadow-redpack: 0 4px 20px rgba(255, 51, 51, 0.2);
+  --shadow-redpack-lg: 0 8px 30px rgba(255, 51, 51, 0.3);
+}
+
+body {
+  background: linear-gradient(135deg, #fff5f5 0%, #ffffff 50%, #ffe0e0 100%);
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.redpack-card {
+  background: linear-gradient(135deg, #ffffff 0%, #fff5f5 100%);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 2px solid var(--color-redpack-200);
+  box-shadow: var(--shadow-redpack);
+}
+
+.redpack-button {
+  background: linear-gradient(to right, var(--color-redpack-500), var(--color-redpack-600));
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow-redpack);
+  transition: all 0.3s;
+}
+
+.redpack-button:hover {
+  box-shadow: var(--shadow-redpack-lg);
+  transform: scale(1.05);
+}
+
+.redpack-button:active {
+  transform: scale(0.95);
+}
+
+.redpack-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 2px solid var(--color-redpack-200);
+  outline: none;
+  transition: all 0.3s;
+}
+
+.redpack-input:focus {
+  border-color: var(--color-redpack-500);
+  box-shadow: 0 0 0 2px rgba(255, 51, 51, 0.2);
+}
