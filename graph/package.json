@@ -1,0 +1,21 @@
+{
+  "name": "graph",
+  "version": "1.0.0",
+  "description": "The Graph subgraph for the RedPacket contract",
+  "main": "dist/index.js",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy:studio": "graph deploy --studio eth-redpacket",
+    "create:local": "graph create eth-redpacket"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@graphprotocol/graph-cli": "^0.98.1"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-ts": "^0.38.2"
+  }
+}
